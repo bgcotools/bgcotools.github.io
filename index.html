@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+        .button:hover {background-color: #3e8e41}
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Website</h1>
+        <button class="button" onclick="checkLogin()">Weather (Login Required)</button>
+    </div>
+
+    <script>
+        function checkLogin() {
+            var isLoggedIn = confirm("Are you logged in?");
+            if (isLoggedIn) {
+                window.location.href = "https://techgenius1234.github.io/weatheralerts/index.html";
+            } else {
+                alert("Please log in to access the weather alerts.");
+            }
+        }
+    </script>
+</body>
+</html>
 
